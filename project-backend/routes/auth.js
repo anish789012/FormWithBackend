@@ -5,7 +5,7 @@ const cors = require("cors"); // Import cors
 const router = express.Router();
 const axios = require("axios");
 
-const CAPTCHA_SECRET_KEY = "6Le8xMgqAAAAAK30SpfCXmjvpcRkJ8M_rzoERTC1";
+const CAPTCHA_SECRET_KEY = process.env.CAPTCHA_SECRET_KEY;
 
 // Apply CORS to this route specifically
 router.post("/register", cors(), async (req, res) => {
